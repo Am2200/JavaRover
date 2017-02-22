@@ -8,18 +8,19 @@ import netcracker.intensive.rover.stats.SimpleRoverStatsModule;
 
 import java.io.*;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
  * Этот класс должен уметь все то, что умеет обычный Rover, но при этом он еще должен уметь выполнять программы,
  * содержащиеся в файлах
  */
-public class ProgrammableRover {
+public class ProgrammableRover implements ProgramFileAware {
     private Rover rover = null;
     private SimpleRoverStatsModule statsModule = null;
     private StringBuilder builder = null;
     private RoverCommandParser parser = null;
-    private HashMap<String, Integer> map = null;
+    private LinkedHashMap<String, Integer> map = null;
 
 
     public ProgrammableRover(GroundVisor visor, SimpleRoverStatsModule statsModule) {
@@ -27,7 +28,7 @@ public class ProgrammableRover {
         this.statsModule = statsModule;
         this.builder = new StringBuilder();
         this.parser = new RoverCommandParser();
-        this.map = new HashMap<>();
+        this.map = new LinkedHashMap<>();
     }
 
     /**
@@ -67,9 +68,14 @@ public class ProgrammableRover {
     private void parseStringBuilder(StringBuilder builder) {
         String[] s = builder.toString().split("\n");
         int tmp = 0;
+        int move = 0;
         for (int i = 0; i < s.length; ++i) {
             for(char elem: s[i].toCharArray()) {
                 if(elem == ' ') tmp += 1;
+            }
+            if (s[i].equals("move"))  {
+                s[i] += String.valueOf(move);
+                move++;
             }
             map.put(s[i], tmp);
             tmp = 0;
@@ -101,7 +107,7 @@ public class ProgrammableRover {
                 //nothing
                 break;
             default:
-                //some code...
+                rover.move();
         }
     }
 
