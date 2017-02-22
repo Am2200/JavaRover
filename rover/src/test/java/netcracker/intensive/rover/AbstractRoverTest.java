@@ -25,6 +25,11 @@ public abstract class AbstractRoverTest {
                 new GroundCell(FREE), new GroundCell(FREE), new GroundCell(FREE));
     }};
 
+    /**
+     * Не правильные координаты
+     * @param ground
+     * @throws OutOfGroundException
+     */
     protected void assertSquareGround(Ground ground) throws OutOfGroundException {
         assertTrue("Cell (0,0) must be free", FREE.equals(ground.getCell(0, 0).getState()));
         assertTrue("Cell (1,0) must be free", FREE.equals(ground.getCell(1, 0).getState()));

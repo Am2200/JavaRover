@@ -1,3 +1,4 @@
+/*
 package netcracker.intensive.rover.programmable;
 
 import netcracker.intensive.rover.AbstractRoverTest;
@@ -56,3 +57,4 @@ public class ProgrammableRoverTest extends AbstractRoverTest {
         testedInstance.getSettings().put("test", "value");
     }
 }
+*/

@@ -116,7 +116,7 @@ public class RoverTest extends AbstractRoverTest {
         testedInstance.lift();
 
         testedInstance.land(new Point(1, 1), Direction.EAST);
-
+        //assertFalse
         assertTrue(testedInstance.isAirborne());
     }
 

@@ -1,3 +1,4 @@
+/*
 package netcracker.intensive.rover.command;
 
 import ch.qos.logback.classic.Logger;
@@ -50,3 +51,4 @@ public class LoggingCommandTest extends AbstractCommandTest {
         LOGGER.detachAppender(appender);
     }
 }
+*/

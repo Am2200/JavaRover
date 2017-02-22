@@ -1,3 +1,4 @@
+/*
 package netcracker.intensive.rover.command;
 
 import netcracker.intensive.rover.Point;
@@ -34,3 +35,4 @@ public class LandCommandTest extends AbstractCommandTest {
     }
 
 }
+*/

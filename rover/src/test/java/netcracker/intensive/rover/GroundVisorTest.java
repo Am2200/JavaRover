@@ -15,6 +15,7 @@ public class GroundVisorTest extends AbstractRoverTest {
 
     @Test
     public void testHasObstaclesReturnsFalseOnFreeCell() throws OutOfGroundException {
+        //assertTrue
         assertFalse("Cell (0,0) must be free", testedInstance.hasObstacles(new Point(0, 0)));
     }
 
