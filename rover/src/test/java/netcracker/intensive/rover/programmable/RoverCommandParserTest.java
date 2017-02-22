@@ -22,7 +22,7 @@ public class RoverCommandParserTest extends AbstractRoverTest {
 
     @Test
     public void testGetProgramReturnsProgramWithEmptySettingsOnEmptyFile() {
-        String file = "empty.txt";
+        String file = "C:\\Users\\sc7985\\Desktop\\jar\\jar\\java-nc-intensive\\rover\\src\\test\\resources\\netcracker\\intensive\\rover\\programmable\\empty.txt";
         testedInstance = new RoverCommandParser(rover, file);
 
         RoverProgram program = testedInstance.getProgram();

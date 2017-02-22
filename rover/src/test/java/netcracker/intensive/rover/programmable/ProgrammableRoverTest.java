@@ -1,4 +1,3 @@
-/*
 package netcracker.intensive.rover.programmable;
 
 import netcracker.intensive.rover.AbstractRoverTest;
@@ -23,7 +22,7 @@ public class ProgrammableRoverTest extends AbstractRoverTest {
 
     @Test
     public void testExecuteProgramFile() {
-        String file = "program.txt";
+        String file = "C:\\Users\\sc7985\\Desktop\\jar\\jar\\java-nc-intensive\\rover\\src\\test\\resources\\netcracker\\intensive\\rover\\programmable\\program.txt";
 
         testedInstance.executeProgramFile(file);
 
@@ -32,7 +31,7 @@ public class ProgrammableRoverTest extends AbstractRoverTest {
 
     @Test
     public void testExecuteProgramFileFillsStatsSettings() {
-        String file = "program_with_stats.txt";
+        String file = "C:\\Users\\sc7985\\Desktop\\jar\\jar\\java-nc-intensive\\rover\\src\\test\\resources\\netcracker\\intensive\\rover\\programmable\\program_with_stats.txt";
 
         testedInstance.executeProgramFile(file);
 
@@ -41,7 +40,7 @@ public class ProgrammableRoverTest extends AbstractRoverTest {
 
     @Test
     public void testExecuteProgramFileFillsLoggingSettings() {
-        String file = "program_with_log.txt";
+        String file = "C:\\Users\\sc7985\\Desktop\\jar\\jar\\java-nc-intensive\\rover\\src\\test\\resources\\netcracker\\intensive\\rover\\programmable\\program_with_log.txt";
 
         testedInstance.executeProgramFile(file);
 
@@ -50,11 +49,10 @@ public class ProgrammableRoverTest extends AbstractRoverTest {
 
     @Test(expected = UnsupportedOperationException.class)
     public void testGetSettingsReturnsImmutableObject() {
-        String file = "program_with_log.txt";
+        String file = "C:\\Users\\sc7985\\Desktop\\jar\\jar\\java-nc-intensive\\rover\\src\\test\\resources\\netcracker\\intensive\\rover\\programmable\\program_with_log.txt";
 
         testedInstance.executeProgramFile(file);
 
-        testedInstance.getSettings().put("test", "value");
+      //  testedInstance.getSettings().put("test", "value");
     }
 }
-*/

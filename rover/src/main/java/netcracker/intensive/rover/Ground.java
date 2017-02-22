@@ -31,7 +31,6 @@ public class Ground {
      * @param args - ячейки
      */
     public void initialize(GroundCell... args) {
-    //    System.out.println(args.length);
         if (args.length != 0) {
             if (iSize * jSize > args.length) throw new IllegalArgumentException("Error");   //Ошибка не правильно вызывается
             int tmp = 0;
